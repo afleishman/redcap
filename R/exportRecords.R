@@ -82,7 +82,6 @@ function(rcon)
          content='metadata',
          format='csv',.opts=curlOptions(ssl.verifyhost=FALSE))
    x <- read.csv(textConnection(x), stringsAsFactors=FALSE, na.strings="")
-   x$required_field <- as.integer(x$required_field)
    x
 }
 
